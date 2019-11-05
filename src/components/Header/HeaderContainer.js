@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchRepos } from '../../actions/repos';
+import { fetchRepos, resetRepos } from '../../actions/repos';
 import Header from './Header';
 
 const mapStateToProps = (state) => {
@@ -12,6 +12,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     fetchRepos: (input, page) => {
       dispatch(fetchRepos(input, page));
+    },
+    resetRepos: () => {
+      dispatch(resetRepos());
     }
   };
 };

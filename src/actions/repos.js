@@ -15,3 +15,9 @@ export const fetchRepos = (input, page) => (dispatch, getState) => {
     }
   });
 };
+
+export const RESET_REPOS = 'RESET_REPOS';
+
+export const resetRepos = () => ({
+  type: RESET_REPOS
+})

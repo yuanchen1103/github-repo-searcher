@@ -1,8 +1,12 @@
 import { connect } from 'react-redux';
 import Repos from './Repos';
 
-const mapStateToProps = () => {
-  return {};
+const mapStateToProps = (state) => {
+  return {
+    isFetching: state.repos.isFetching,
+    isBottom: state.repos.isBottom,
+    repoData: state.repos.data
+  };
 };
 
 const mapDispatchToProps = () => {

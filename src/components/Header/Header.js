@@ -1,18 +1,19 @@
-import React, { useCallback, useRef, useEffect } from 'react';
+import React, { useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import debounce from 'lodash/debounce';
 
 import styles from './Header.module.scss';
 import githubLogo from '../../img/github-logo.svg';
 
-const Header = ({ isFetching, fetchRepos }) => {
+const Header = ({ isFetching, fetchRepos, resetRepos }) => {
   const inputRef = useRef(null);
   const handleChange = useCallback(
     (e) => {
+      resetRepos();
       const inputValue = inputRef.current.value;
       fetchRepos(inputValue);
     },
-    [fetchRepos]
+    [fetchRepos, resetRepos]
   );
   const handleDebounceChange = debounce((e) => handleChange(e), 500);
 
@@ -34,7 +35,8 @@ const Header = ({ isFetching, fetchRepos }) => {
 
 Header.propTypes = {
   isFetching: PropTypes.bool.isRequired,
-  fetchRepos: PropTypes.func.isRequired
+  fetchRepos: PropTypes.func.isRequired,
+  resetRepos: PropTypes.func.isRequired
 };
 
 export default React.memo(Header);

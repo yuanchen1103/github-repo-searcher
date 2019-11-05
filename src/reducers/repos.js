@@ -1,7 +1,8 @@
 import {
   FETCH_REPOS_REQUEST,
   FETCH_REPOS_SUCCESS,
-  FETCH_REPOS_FAILURE
+  FETCH_REPOS_FAILURE,
+  RESET_REPOS
 } from '../actions/repos';
 
 const initState = {
@@ -30,6 +31,8 @@ const repos = (state = initState, action) => {
         ...state,
         isFetching: false
       };
+    case RESET_REPOS:
+      return initState;
     default:
       return state;
   }
