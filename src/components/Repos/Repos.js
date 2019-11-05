@@ -8,7 +8,7 @@ const Repos = () => {
   return (
     <main className={styles.wrapper}>
       <div className="container">
-        <div className="col-md-2 col-lg-4">
+        <div className="col-md-6 col-lg-4">
           <RepoBlock />
         </div>
       </div>
