@@ -3,10 +3,14 @@ import { Provider } from 'react-redux';
 
 import store from './configureStore';
 
+import HeaderContainer from './components/Header/HeaderContainer';
+
 function App() {
   return (
     <Provider store={store}>
-      <div className="App"></div>
+      <div className="App">
+        <HeaderContainer />
+      </div>
     </Provider>
   );
 }
