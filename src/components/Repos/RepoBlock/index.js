@@ -15,13 +15,13 @@ const RepoBlock = () => {
       </p>
       <small>
         <span>
-          <i class="fas fa-star"></i> 2.2k
+          <i className="fas fa-star"></i> 2.2k
         </span>
         <span>
-          <i class="fas fa-code"></i> Javascript
+          <i className="fas fa-code"></i> Javascript
         </span>
         <span>
-          <i class="fas fa-history"></i> 2019/02/01
+          <i className="fas fa-history"></i> 2019/02/01
         </span>
       </small>
     </div>
