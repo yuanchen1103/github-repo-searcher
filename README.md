@@ -41,3 +41,12 @@ Other Tools
 ---
 * eslint：統一程式碼風格。
 * git flow: 管理 commit 與 branch。
+
+Note
+---
+Github Api 有 rate limit限制（10req/min），若要提高限制可申請 github app 拿到 `client_id`，與 `client_secret`，並加入環境變數。
+https://developer.github.com/v3/search/#rate-limit
+```
+REACT_APP_CLIENT_ID=<your-client-id>
+REACT_APP_CLIENT_SECRET=<your-client-secret>
+```
