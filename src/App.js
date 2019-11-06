@@ -1,5 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import ScrollUpButton from "react-scroll-up-button";
 
 import store from './configureStore';
 
@@ -12,6 +13,7 @@ function App() {
       <div className="App">
         <HeaderContainer />
         <ReposContainer />
+        <ScrollUpButton />
       </div>
     </Provider>
   );
