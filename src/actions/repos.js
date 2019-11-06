@@ -9,7 +9,7 @@ export const fetchRepos = (input, page) => (dispatch, getState) => {
   dispatch({
     [CALL_API]: {
       types: [FETCH_REPOS_REQUEST, FETCH_REPOS_SUCCESS, FETCH_REPOS_FAILURE],
-      endpoint: `search/repositories?per_page=${PER_PAGE_NUM}&q=${input}&page=${page ||
+      endpoint: `search/repositories?client_id=${process.env.REACT_APP_CLIENT_ID}&client_secret=${process.env.REACT_APP_CLIENT_SECRET}&per_page=${PER_PAGE_NUM}&q=${input}&page=${page ||
         getState().repos.page + 1}`,
       method: 'get'
     }
