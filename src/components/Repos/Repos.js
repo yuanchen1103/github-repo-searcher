@@ -9,8 +9,8 @@ const Repos = ({ isFetching, isBottom, repoData }) => {
     <main className={styles.wrapper}>
       <div className="container">
         <div className="row">
-          {repoData.map((item) => (
-            <div className="col-md-6 col-lg-4">
+          {repoData.map((item, i) => (
+            <div className="col-md-6 col-lg-4" key={`${item.id}-${i}`}>
               <RepoBlock
                 name={item.full_name}
                 lang={item.language}
@@ -22,6 +22,12 @@ const Repos = ({ isFetching, isBottom, repoData }) => {
           ))}
         </div>
       </div>
+      {isFetching && (
+        <div className={styles.spinner}>
+          <i className="fas fa-spinner fa-spin"></i>
+        </div>
+      )}
+      {isBottom && <div className={styles.noData}>No Data</div>}
     </main>
   );
 };

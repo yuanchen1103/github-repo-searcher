@@ -4,7 +4,9 @@ import Header from './Header';
 
 const mapStateToProps = (state) => {
   return {
-    isFetching: state.repos.isFetching
+    isFetching: state.repos.isFetching,
+    isBottom: state.repos.isBottom,
+    isError: state.repos.error
   };
 };
 

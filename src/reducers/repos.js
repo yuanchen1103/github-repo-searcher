@@ -9,7 +9,8 @@ const initState = {
   isFetching: false,
   data: [],
   page: 0,
-  isBottom: false
+  isBottom: false,
+  error: false
 };
 
 const repos = (state = initState, action) => {
@@ -17,18 +18,22 @@ const repos = (state = initState, action) => {
     case FETCH_REPOS_REQUEST:
       return {
         ...state,
+        error: false,
         isFetching: true
       };
     case FETCH_REPOS_SUCCESS:
       return {
         ...state,
+        error: false,
         data: [...state.data, ...action.response.items],
         isFetching: false,
-        isBottom: action.response.items.length === 0
+        isBottom: action.response.items.length === 0,
+        page: action.response.items.length === 0 ? state.page : state.page + 1
       };
     case FETCH_REPOS_FAILURE:
       return {
         ...state,
+        error: true,
         isFetching: false
       };
     case RESET_REPOS:

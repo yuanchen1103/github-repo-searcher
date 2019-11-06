@@ -6,13 +6,17 @@
   margin-bottom: 20px;
 
   a {
+    display: block;
     color: #0366d6;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
     transition: color 0.4s;
     line-height: 1.5;
-    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
 
     &:hover {
       color: #0253b1;
