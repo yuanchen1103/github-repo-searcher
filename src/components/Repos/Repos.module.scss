@@ -1,0 +1,19 @@
+.wrapper {
+  min-height: calc(100vh - 400px);
+  width: 100%;
+  background-color: #f6f8fa;
+  padding: 30px 0;
+}
+
+.spinner {
+  font-size: 24px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.noData {
+  font-size: 16px;
+  margin: 10px 0;
+  text-align: center;
+  color: #5c5c5c;
+}
