@@ -14,6 +14,11 @@
     color: white;
     margin-top: 30px;
   }
+  .inputGroup {
+    position: relative;
+    width: fit-content;
+    margin: 30px auto 0;
+  }
   input {
     padding: 10px 15px;
     outline: 0;
@@ -21,7 +26,11 @@
     border-radius: 4px;
     width: 300px;
     font-size: 18px;
-    margin-top: 30px;
     color: #24292E
+  }
+  :global(.fa-spinner) {
+    position: absolute;
+    right: 10px;
+    top: 15px;
   }
 }
